@@ -60,7 +60,6 @@ public class Functions { // apologies for the bad class name
 
             totalOutput += br.readLine(); // learnt from oracle java and W3
 
-            System.out.println(totalOutput);
             return totalOutput;
 
         } catch (Exception e) {
