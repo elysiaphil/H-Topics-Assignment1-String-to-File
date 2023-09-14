@@ -4,12 +4,18 @@
 import java.util.*;
 
 import java.io.*; //import needed for files
+import java.io.BufferedReader;
+import java.io.IOException;
 
 public class Functions { // apologies for the bad class name
     public static void main(String[] args) {
 
         Functions.stringToFile();
         System.out.println(Functions.fileToString());
+
+    }
+
+    public Functions() {
 
     }
 
@@ -70,4 +76,16 @@ public class Functions { // apologies for the bad class name
         }
 
     }
+
+    public int countCharacters(String fileName) throws IOException {
+        int count = 0;
+        BufferedReader br = new BufferedReader(new FileReader(fileName));
+        while (br.ready()) {
+            br.read();
+            count++;
+        }
+        br.close();
+        return count;
+    }
+
 }
